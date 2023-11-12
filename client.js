@@ -19,6 +19,16 @@ const connect = function () {
     conn.write("Name: SEL");
   });
 
+  // conn.on("connect", () => {  demo to show how to move snake up DELETE BEFORE FINAL SUBMISSION
+  //   conn.write("Move: up");
+
+  //   setInterval(() => {
+  //     conn.write("Move: up");
+  //   }, 50);
+  // });
+
+
+
   return conn;
 };
 
