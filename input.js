@@ -14,6 +14,18 @@ const handleUserInput = function (key) {
   if (key === 'd') {
     connection.write("Move: right");
   }
+
+  if (key === 'o') {
+    connection.write("Say: OOH");
+  }
+
+  if (key === 'i') {
+    connection.write("Say: NO!");
+  }
+
+  if (key === 'p') {
+    connection.write("Say: PHEW");
+  }
 };
 // setup interface to handle user input from stdin
 
