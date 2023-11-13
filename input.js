@@ -7,17 +7,17 @@ const handleUserInput = function (key) {
   if (key === '\u0003') {
     process.exit();
   }
-  if (key === 'w') {
-    connection.write(MOVE_UP_KEY);
+  if (key === MOVE_UP_KEY) {
+    connection.write("Move: up");
   }
-  if (key === 'a') {
-    connection.write(MOVE_LEFT_KEY);
+  if (key === MOVE_LEFT_KEY) {
+    connection.write("Move: left");
   }
-  if (key === 's') {
-    connection.write(MOVE_DOWN_KEY);
+  if (key === MOVE_DOWN_KEY) {
+    connection.write("Move: down");
   }
-  if (key === 'd') {
-    connection.write(MOVE_RIGHT_KEY);
+  if (key === MOVE_RIGHT_KEY) {
+    connection.write("Move: right");
   }
 
   if (key === 'o') {
