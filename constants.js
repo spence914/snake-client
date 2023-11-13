@@ -1,9 +1,9 @@
 const IP = 'localhost';
 const PORT = 50541;
-const MOVE_UP_KEY = "Move: up";
-const MOVE_DOWN_KEY = "Move: down";
-const MOVE_LEFT_KEY = "Move: left";
-const MOVE_RIGHT_KEY = "Move: right";
+const MOVE_UP_KEY = "w";
+const MOVE_DOWN_KEY = "s";
+const MOVE_LEFT_KEY = "a";
+const MOVE_RIGHT_KEY = "d";
 
 module.exports = {
   IP,
