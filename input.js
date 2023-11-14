@@ -1,9 +1,12 @@
-const {MOVE_UP_KEY,
+const { MOVE_UP_KEY,
   MOVE_DOWN_KEY,
   MOVE_LEFT_KEY,
-  MOVE_RIGHT_KEY} = require('./constants');
+  MOVE_RIGHT_KEY,
+  SAY_NO_KEY,
+  SAY_OOH_KEY,
+  SAY_PHEW_KEY } = require('./constants');
 
-const handleUserInput = function (key) {
+const handleUserInput = (key) => {
   if (key === '\u0003') {
     process.exit();
   }
@@ -20,22 +23,22 @@ const handleUserInput = function (key) {
     connection.write("Move: right");
   }
 
-  if (key === 'o') {
+  if (key === SAY_OOH_KEY) {
     connection.write("Say: OOH");
   }
 
-  if (key === 'i') {
+  if (key === SAY_NO_KEY) {
     connection.write("Say: NO!");
   }
 
-  if (key === 'p') {
+  if (key === SAY_PHEW_KEY) {
     connection.write("Say: PHEW");
   }
 };
 // setup interface to handle user input from stdin
 
 let connection;
-const setupInput =  (conn) => {
+const setupInput = (conn) => {
   connection = conn;
   const stdin = process.stdin;
   stdin.setRawMode(true);
@@ -48,4 +51,4 @@ const setupInput =  (conn) => {
   return stdin;
 };
 
-module.exports = {setupInput};
+module.exports = { setupInput };
