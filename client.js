@@ -21,17 +21,8 @@ const connect =  () => {
     conn.write("Name: SEL");
   });
 
-  // conn.on("connect", () => {  demo to show how to move snake up DELETE BEFORE FINAL SUBMISSION
-  //   conn.write("Move: up");
 
-  //   setInterval(() => {
-  //     conn.write("Move: up");
-  //   }, 50);
-  // });
-
-
-
-  return conn;
+  return conn; // return conn object so when connect() is called within setupInput() in play.js, input commands can be passed
 };
 
 module.exports = { connect };
