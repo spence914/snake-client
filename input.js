@@ -23,7 +23,7 @@ const handleUserInput = (key) => {
     connection.write("Move: right");
   }
 
-  if (key === SAY_OOH_KEY) {
+  if (key === SAY_OOH_KEY) { // Messages to send to other players on server
     connection.write("Say: OOH");
   }
 
@@ -35,6 +35,8 @@ const handleUserInput = (key) => {
     connection.write("Say: PHEW");
   }
 };
+
+
 // setup interface to handle user input from stdin
 
 let connection;
